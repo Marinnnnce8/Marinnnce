@@ -1,0 +1,111 @@
+footer {
+    display: block;
+    float: left;
+    width: 100%;
+    background: $mirage;
+
+    .ft-wrapper {
+        width: 25%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-column-gap: 20%;
+        margin:  0 auto;
+        padding: 15px 0;
+
+        .social-icons, .social-icons img {
+            max-width: 100%;
+        }
+
+        .social-icons:hover {
+            -webkit-transition: all .5s ease-in;
+            -webkit-transform: scale(1.2); 
+            -ms-transition: all .5s ease-in;
+            -ms-transform: scale(1.2); 
+            -moz-transition: all .5s ease-in;
+            -moz-transform: scale(1.2);
+            transition: all .5s ease-in;
+            transition: all .5s ease-in;
+            transform: scale(1.2);  
+        }
+    }
+    #cr {
+        width: 50%;
+        display: block;
+        text-align: center;
+        color: $heliotrope;
+        margin: 0 auto;
+        padding: 25px;
+    }
+    .up {
+        width: 3%;
+        position: relative;
+        text-align: center;
+        background: $scooter;
+        margin: 0 auto;
+        border-radius: 5px;
+        -webkit-animation: arrow 3s  infinite ease;
+        animation: arrow 3s  infinite ease;
+    }
+
+    @-webkit-keyframes arrow {
+        0%, 100% {
+            top: 5px;
+        }
+        50% {
+            top: 20px;
+        }
+    }
+
+    @keyframes arrow {
+        0%, 100% {
+            top: 5px;
+        }
+        50% {
+            top: 20px;
+        }
+    }
+    
+    .up, .up img {
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width:768px){
+  footer .ft-wrapper{
+    width: 25%;
+    grid-template-columns: 1fr 1fr;
+
+        .social-icons {
+            text-align: center;
+        }
+    }
+    footer #cr {
+        padding-bottom: 15px;
+        padding-top: 0;
+    }
+    footer .up {
+        width: 10%;
+    }
+
+    @-webkit-keyframes arrow {
+        0%, 100% {
+            top: 3px;
+        }
+        50% {
+            top: 15px;
+        }
+    }
+
+    @keyframes arrow {
+        0%, 100% {
+            top: 3px;
+        }
+        50% {
+            top: 15px;
+        }
+    }
+    
+    .up, .up img {
+        max-width: 100%;
+    }
+}

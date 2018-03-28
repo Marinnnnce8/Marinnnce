@@ -1,0 +1,171 @@
+header {
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    border-bottom: 3px solid $heliotrope;
+    background: transparent;
+
+    .header-wrapper {
+        width: 80%;
+        margin: 0 auto;
+
+        .logo {
+            margin-top: 4px;
+            float: left;
+            width: 40px;
+            height: 40px;
+            background: url('../img/logo.png') no-repeat center;
+            display: block;
+        }
+
+        .menu-icon {
+            display: hidden;
+        }
+
+        nav {
+            float: right;
+            font-size: 1em;
+
+            ul {
+                list-style: none;
+                line-height: 50px;
+                display: block;
+
+                li {
+                    float: left;
+                    display: inline-block;
+                
+                    a {
+                        text-decoration: none;
+                        color: $white;
+                        text-transform: uppercase;
+                    }
+                    & :hover {
+                        color: $aquamarine-blue;
+                    }
+                    & :checked {
+                        color: $aquamarine-blue;
+                    }      
+                } 
+            }
+            ul :not(:first-child){
+                padding-left: 25px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:769px){
+    nav {
+        ul {
+            display: block !important;
+        }
+     }
+}
+
+@media only screen and (max-width:768px){
+    header {
+        position: fixed;
+
+        .header-wrapper{
+            width: 15%;
+            margin: 0 auto;
+
+            .nav-button {
+                cursor: pointer;
+                position: absolute;
+                right: 50px;
+                top: 12px; }
+              
+              .nav-button span,
+              .nav-button span:before,
+              .nav-button span:after {
+                background: $heliotrope;
+                width: 21px;
+                height: 4px;
+                transition: all 300ms ease-in-out;
+                position: absolute;
+                left: 0;
+                top: 8px;
+                content: ''; }
+              
+              .nav-button span:before {
+                top: -8px; }
+              
+              .nav-button span:after {
+                top: 8px; }
+              
+              #nav-toggle.active span {
+                background-color: transparent; }
+              
+              #nav-toggle.active span:before, #nav-toggle.active span:after {
+                top: 0; }
+              
+              #nav-toggle.active span:before {
+                transform: rotate(45deg); }
+              
+              #nav-toggle.active span:after {
+                transform: rotate(-45deg); }
+              
+              #nav-toggle {
+                position: absolute;
+                cursor: pointer;
+                padding: 10px 35px 16px 0; }
+        
+            .logo {
+                float: none;
+                margin: 0 auto;
+            }
+
+                .menu-icon {
+                    width: 32px;
+                    height: 32px;
+                    float: right;
+                    background:url('../img/search.png') no-repeat;
+                    margin-top: 10px;
+                }
+
+            nav {   
+            background: $scooter;
+            }
+
+            nav ul, nav:active ul {
+                
+                position: absolute;
+                width: 100%;
+                background: $mirage;
+                padding: 0;
+                margin: 0;
+                right: 0;
+                top: 50px;
+            }
+            nav ul, li {
+                display: none;
+            }
+            li {
+                padding: 5px 0;
+                width: 100%;
+                margin: 0;
+                padding-left: 0!important;
+                text-align: center;
+
+                a {
+                    color: $white;
+
+                    &:checked {
+                        color: $scooter;
+                    }
+                }
+            }
+            // nav:hover ul {
+            //     display: block;
+            // }
+            nav li:not(last-child){
+                border-bottom: 1px solid $ebony-clay;
+            }
+        }  
+    }
+}
